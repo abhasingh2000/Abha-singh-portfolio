@@ -96,70 +96,8 @@ const openContact = (type) => {
           </p>
 
           <div className="social-links">
-               <button className="social-btn" onClick={() => openContact("call")}>
-        <Phone size={20} />
-        <span>Call Me</span>
-      </button>
 
-      <button className="social-btn" onClick={() => openContact("email")}>
-        <Mail size={20} />
-        <span>Email Me</span>
-      </button>
-           
-            <a href="https://www.linkedin.com/in/abha-singh-979164197/" target="_blank" rel="noopener noreferrer" className="social-btn">
-              <Linkedin size={20} />
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://github.com/abhasingh2000" target="_blank" rel="noopener noreferrer" className="social-btn">
-              <Github size={20} />
-              <span>GitHub</span>
-            </a>
-          </div>
-           <AnimatePresence>
-              {showContact && (
-                <motion.div
-                  className="contact-modal-overlay"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                >
-                  <motion.div
-                    className="contact-modal"
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.8, opacity: 0 }}
-                    transition={{ type: "spring", stiffness: 150 }}
-                  >
-                    <button className="close-btn" onClick={closeContact}>
-                      <X size={22} />
-                    </button>
-
-                    <div className="contact-icon">
-                      {contactDetails[contactType].icon}
-                    </div>
-                    <h2 className="contact-title">{contactDetails[contactType].title}</h2>
-                    <p className="contact-info">{contactDetails[contactType].info}</p>
-
-                    <div className="contact-actions">
-                      <button
-                        className="contact-action-btn secondary"
-                        onClick={() => {
-                          navigator.clipboard.writeText(
-                            contactDetails[contactType].info
-                          );
-                          alert("Copied to clipboard!");
-                        }}
-                      >
-                        <Copy size={18} />
-                        Copy
-                      </button>
-                    </div>
-                  </motion.div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          {/* Resume View & Download Buttons */}
-          <div className="resume-buttons">
+             <div className="resume-buttons">
             <a
               href="https://drive.google.com/file/d/133ChKHb1nS6rVNZWel_v3EA-Bl4pGZQ6/view?usp=sharing"
               target="_blank"
@@ -181,6 +119,11 @@ const openContact = (type) => {
               <span>Download Resume</span>
             </a>
           </div>
+  
+          </div>
+
+          {/* Resume View & Download Buttons */}
+        
 
           <button className="scroll-indicator" onClick={() => scrollToSection('about')}>
             <ChevronDown size={32} className="bounce" />
