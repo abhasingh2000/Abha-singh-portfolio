@@ -4,11 +4,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail,Copy, Phone, ExternalLink, Code, Briefcase, GraduationCap, Award, ChevronDown , X } from 'lucide-react';
 import './portfolio.css';
+import ContactForm from "./Contactform";
 
 const Portfolio = () => {
   const [isVisible, setIsVisible] = useState({});
   const [showContact, setShowContact] = useState(false);
   const [contactType, setContactType] = useState("");
+  const [showContactForm, setShowContactForm] = useState(false);
+
+  const openContactForm = () => {
+  setShowContactForm(true);
+};
+const closeContactForm = () => {
+  setShowContactForm(false);
+};
+
 
   const closeContact = () => setShowContact(false);
 
@@ -361,7 +371,7 @@ const openContact = (type) => {
                 <span className="skill-tag">TypeScript</span>
                 <span className="skill-tag">Core Java</span>
                 <span className="skill-tag">Python</span>
-                
+
               </div>
             </div>
 
@@ -537,7 +547,7 @@ const openContact = (type) => {
           </p>
 
           <div className="contact-buttons">
-            <a href="https://linkedin.com/in/abhasingh" target="_blank" rel="noopener noreferrer" className="contact-btn secondary">
+            <a href="https://www.linkedin.com/in/abha-singh-979164197/" target="_blank" rel="noopener noreferrer" className="contact-btn secondary">
               <Linkedin size={24} />
               <span>Connect on LinkedIn</span>
             </a>
@@ -545,9 +555,43 @@ const openContact = (type) => {
               <Github size={24} />
               <span>View GitHub</span>
             </a>
+             <button className="contact-btn primary" onClick={openContactForm}>
+        <Mail size={24} />
+        <span>Get In Touch</span>
+      </button>
           </div>
         </div>
+         <AnimatePresence>
+    {showContactForm && (
+      <motion.div
+        className="contact-modal-overlay"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <motion.div
+          className="contact-modal large"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.8, opacity: 0 }}
+          transition={{ type: "spring", stiffness: 150 }}
+        >
+          <button className="close-btn" onClick={closeContactForm}>
+            <X size={22} />
+          </button>
+          <h2 className="contact-modal-title">Get In Touch</h2>
+          <p className="contact-modal-subtitle">
+            Fill in the details below — your message will be sent directly to me.
+          </p>
+          <ContactForm />
+        </motion.div>
+      </motion.div>
+    )}
+  </AnimatePresence>
+
       </section>
+
+      
 
       {/* Footer */}
       <footer className="footer">

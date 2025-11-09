@@ -280,7 +280,10 @@ html {
 }
 
 .title-icon {
-  color: #a78bfa;
+  /* Hide decorative icons placed before section titles. If you want to keep
+     them in the DOM for accessibility or future use but not show them,
+     use `display: none` here. */
+  display: none;
 }
 
 /* About Section */
@@ -925,11 +928,124 @@ html {
   transition: transform 0.2s;
 }
 
-.contact-action-btn:hover {
+/* .contact-action-btn:hover {
   transform: scale(1.05);
-}
+} */
 
-.contact-action-btn.secondary {
+/* .contact-action-btn.secondary {
   background: transparent;
   border: 1px solid #a78bfa;
+} */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
 }
+
+.contact-input,
+.contact-textarea {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.contact-submit {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.contact-submit:hover {
+  background-color: #1e40af;
+}
+
+/* Contact Modal Overlay */
+.contact-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+/* Contact Modal Box */
+.contact-modal {
+  background: #121212;
+  color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 550px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.contact-modal.large {
+  max-width: 600px;
+}
+
+.contact-modal-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.contact-modal-subtitle {
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ff4d4d;
+}
+
+/* Get In Touch Button */
+/* .contact-btn.primary {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.contact-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
+} */
