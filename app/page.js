@@ -359,8 +359,9 @@ const openContact = (type) => {
               <div className="skill-tags">
                 <span className="skill-tag">JavaScript</span>
                 <span className="skill-tag">TypeScript</span>
-                <span className="skill-tag">Java</span>
+                <span className="skill-tag">Core Java</span>
                 <span className="skill-tag">Python</span>
+                
               </div>
             </div>
 
