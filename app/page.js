@@ -106,11 +106,11 @@ const openContact = (type) => {
         <span>Email Me</span>
       </button>
            
-            <a href="https://linkedin.com/in/abhasingh" target="_blank" rel="noopener noreferrer" className="social-btn">
+            <a href="https://www.linkedin.com/in/abha-singh-979164197/" target="_blank" rel="noopener noreferrer" className="social-btn">
               <Linkedin size={20} />
               <span>LinkedIn</span>
             </a>
-            <a href="https://github.com/abhasingh" target="_blank" rel="noopener noreferrer" className="social-btn">
+            <a href="https://github.com/abhasingh2000" target="_blank" rel="noopener noreferrer" className="social-btn">
               <Github size={20} />
               <span>GitHub</span>
             </a>
@@ -551,7 +551,7 @@ const openContact = (type) => {
               <Linkedin size={24} />
               <span>Connect on LinkedIn</span>
             </a>
-            <a href="https://github.com/abhasingh" target="_blank" rel="noopener noreferrer" className="contact-btn secondary">
+            <a href="https://github.com/abhasingh2000" target="_blank" rel="noopener noreferrer" className="contact-btn secondary">
               <Github size={24} />
               <span>View GitHub</span>
             </a>
@@ -600,7 +600,7 @@ const openContact = (type) => {
           <div className="footer-links">
             <a href="mailto:abhasingh@gmail.com">abhasingh00522@gmail.com</a>
             <span className="separator">•</span>
-            <a href="https://github.com/abhasingh" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/abhasingh2000" target="_blank" rel="noopener noreferrer">GitHub</a>
             <span className="separator">•</span>
             <a href="https://www.linkedin.com/in/abha-singh-979164197/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
