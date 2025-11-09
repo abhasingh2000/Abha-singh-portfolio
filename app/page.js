@@ -431,48 +431,56 @@ const openContact = (type) => {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="section">
-        <div className={`section-content ${isVisible.education ? 'visible' : ''}`}>
-          <h2 className="section-title">
-            <GraduationCap className="title-icon" size={40} />
-            Education & Certifications
-          </h2>
+     {/* Education Section */}
+<section id="education" className="section">
+  <div className={`section-content ${isVisible.education ? 'visible' : ''}`}>
+    <h2 className="section-title">
+      <GraduationCap className="title-icon" size={40} />
+      Education & Certifications
+    </h2>
 
-          <div className="education-section">
-            <h3 className="education-subtitle">Academic Background</h3>
-            <div className="education-list">
-              <div className="education-card">
-                <h4 className="degree-name">Master of Computer Application</h4>
-                <p className="institution-name">Banaras Hindu University, Varanasi</p>
-              </div>
+    <div className="education-section">
+      <h3 className="education-subtitle">Academic Background</h3>
+      <div className="education-list">
+  <div className="education-card">
+    <div className="education-left">
+      <h4 className="degree-name">Master of Computer Application</h4>
+      <p className="institution-name">Banaras Hindu University, Varanasi</p>
+    </div>
+    <div className="education-year">2019 - 2022</div>
+  </div>
 
-              <div className="education-card">
-                <h4 className="degree-name">Bachelor of Science in Computer Science</h4>
-                <p className="institution-name">St. John's College, Agra</p>
-              </div>
-            </div>
+  <div className="education-card">
+    <div className="education-left">
+      <h4 className="degree-name">Bachelor of Science in Computer Science</h4>
+      <p className="institution-name">St. John's College, Agra</p>
+    </div>
+    <div className="education-year">2015 - 2018</div>
+  </div>
+</div>
 
-            <h3 className="education-subtitle">Professional Certifications</h3>
-            <div className="certifications-list">
-              <div className="cert-card">
-                <Award className="cert-icon" size={24} />
-                <div>
-                  <h4 className="cert-name">Big Data Computing</h4>
-                  <p className="cert-issuer">NPTEL Online Certification</p>
-                </div>
-              </div>
-
-              <div className="cert-card">
-                <Award className="cert-icon" size={24} />
-                <div>
-                  <h4 className="cert-name">Social Networks</h4>
-                  <p className="cert-issuer">NPTEL Online Certification</p>
-                </div>
-              </div>
-            </div>
+      <h3 className="education-subtitle">Professional Certifications</h3>
+      <div className="certifications-list">
+        <div className="cert-card">
+          <Award className="cert-icon" size={24} />
+          <div>
+            <h4 className="cert-name">Big Data Computing</h4>
+            <p className="cert-issuer">NPTEL Online Certification</p>
           </div>
         </div>
-      </section>
+
+        <div className="cert-card">
+          <Award className="cert-icon" size={24} />
+          <div>
+            <h4 className="cert-name">Social Networks</h4>
+            <p className="cert-issuer">NPTEL Online Certification</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Contact Section */}
       <section id="contact" className="section dark-section">
