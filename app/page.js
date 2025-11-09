@@ -602,7 +602,7 @@ const openContact = (type) => {
             <span className="separator">•</span>
             <a href="https://github.com/abhasingh" target="_blank" rel="noopener noreferrer">GitHub</a>
             <span className="separator">•</span>
-            <a href="https://linkedin.com/in/abhasingh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/abha-singh-979164197/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
       </footer>
